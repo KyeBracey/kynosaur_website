@@ -3,17 +3,33 @@ import './App.css';
 
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
+import Projects from './components/Projects';
 
 class App extends React.Component {
   constructor() {
-    super()
+    super();
+    this.state = { currentPage: <Profile /> }
   }
+
+  displayProjects() {
+    this.setState({currentPage: <Projects />})
+  }
+
+  displayProfile() {
+    this.setState({currentPage: <Profile />})
+  }
+
+  // Passing parameters into handlers is not supported :(
+  // Must be a cleaner, more DRY way to do this.
 
   render() {
     return (
       <div className='body'>
-        <NavBar />
-        <Profile />
+        <NavBar
+          displayProjects = {this.displayProjects.bind(this)}
+          displayProfile = {this.displayProfile.bind(this)}
+        />
+        {this.state.currentPage}
       </div>
     );
   }
