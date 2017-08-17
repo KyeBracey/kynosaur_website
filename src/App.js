@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
+import ContactDetails from './components/ContactDetails';
 
 class App extends React.Component {
   constructor() {
@@ -19,6 +20,10 @@ class App extends React.Component {
     this.setState({currentPage: <Profile />})
   }
 
+  displayContactDetails() {
+    this.setState({currentPage: <ContactDetails />})
+  }
+
   // Passing parameters into handlers is not supported :(
   // Must be a cleaner, more DRY way to do this.
 
@@ -28,6 +33,7 @@ class App extends React.Component {
         <NavBar
           displayProjects = {this.displayProjects.bind(this)}
           displayProfile = {this.displayProfile.bind(this)}
+          displayContactDetails = {this.displayContactDetails.bind(this)}
         />
         {this.state.currentPage}
       </div>
