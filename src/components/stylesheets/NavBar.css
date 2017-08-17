@@ -1,0 +1,57 @@
+.navBar {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 33.33333333%;
+  outline: none;
+}
+
+.navBar li {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.navBar > button:not(:first-child):not(:last-child),
+.navBar li:not(:first-child):not(:last-child) button {
+  border-radius: 0;
+}
+.navBar > button:first-child,
+.navBar li:first-child button {
+  margin-left: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.navBar > button:last-child,
+.navBar li:last-child > button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.profileButton {
+  background-color: purple;
+}
+
+.projectsButton {
+  background-color: lightblue;
+}
+
+.contactDetailsButton {
+  background-color: green;
+}
