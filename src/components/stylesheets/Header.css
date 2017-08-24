@@ -1,5 +1,7 @@
 .header {
   padding: 10px;
+  background-image: url('../../images/backgroundpicture.jpg');
+  background-position: center;
 }
 
 .profilePicture {
