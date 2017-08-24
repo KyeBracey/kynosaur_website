@@ -1,3 +1,7 @@
+body {
+  background-color: aliceblue;
+}
+
 .navBar {
   position: relative;
   width: 100%;
@@ -18,7 +22,7 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  width: 33.33333333%;
+  width: 33.33%;
   outline: none;
 }
 
@@ -26,22 +30,6 @@ button {
   float: left;
   padding: 0;
   margin: 0;
-}
-
-.navBar > button:not(:first-child):not(:last-child),
-.navBar li:not(:first-child):not(:last-child) button {
-  border-radius: 0;
-}
-.navBar > button:first-child,
-.navBar li:first-child button {
-  margin-left: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.navBar > button:last-child,
-.navBar li:last-child > button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 .profileButton {
