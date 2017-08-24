@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+import Header from './components/Header'
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
@@ -30,6 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='body'>
+        <Header />
         <NavBar
           displayProjects = {this.displayProjects.bind(this)}
           displayProfile = {this.displayProfile.bind(this)}
